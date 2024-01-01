@@ -18,7 +18,7 @@ int drawCurrentScene(gameState* gameState){
             drawMenuScreen(gameState);
             break;
         case 1:
-            figeDrawText(gameState, "Welp", 10, 10, 200, RED);
+            gameLoop(gameState);
             break;
         default: 
             figeDrawText(gameState, "INVALID SCENE", 10, 10, 90, RED);
