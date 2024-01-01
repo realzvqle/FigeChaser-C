@@ -12,7 +12,7 @@ window setupWindow(){
 
 bool startWindow(gameState* gameState) {
     SetTraceLogLevel(LOG_ERROR);
-    
+    gameState->player.isInitialized = false;
     gameState->scene.isInitialized = false;
     gameState->window = setupWindow();
     InitWindow(gameState->window.size.x, gameState->window.size.y, gameState->window.name);

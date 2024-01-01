@@ -3,6 +3,7 @@
 
 #include "loadCustomFont.h"
 #include "screens.h"    
+#include "gameLoop.h"
 
 int drawCurrentScene(gameState* gameState);
 

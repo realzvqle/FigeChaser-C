@@ -11,11 +11,4 @@ void drawMenuScreen(gameState* gameState);
 
 
 
-
-
-
-
-
-
-
 #endif

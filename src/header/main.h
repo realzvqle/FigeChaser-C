@@ -26,11 +26,20 @@ typedef struct fontLoading{
     int size;
 } fontLoading;
 
+typedef struct player {
+    Texture2D texture;
+    transform size;
+    transform position;
+    bool isInitialized;
+} player;
 typedef struct gameState {
     window window;
     sceneManager scene;
     fontLoading font;
+    player player;
 } gameState;
+
+
 
 
 void figeDrawText(gameState* gameState, char* text, int width, int height, float size, Color color);
