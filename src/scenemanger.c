@@ -15,8 +15,7 @@ int drawCurrentScene(gameState* gameState){
     }
     switch(gameState->scene.currentScene){
         case 0:
-            figeDrawText(gameState, "Idk", 10, 10, 100, BLUE);
-            if(IsKeyDown(KEY_SPACE)) gameState->scene.currentScene = 1;
+            drawMenuScreen(gameState);
             break;
         case 1:
             figeDrawText(gameState, "Welp", 10, 10, 200, RED);

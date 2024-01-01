@@ -33,4 +33,6 @@ typedef struct gameState {
 } gameState;
 
 
+void figeDrawText(gameState* gameState, char* text, int width, int height, float size, Color color);
+
 #endif

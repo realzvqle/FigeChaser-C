@@ -4,6 +4,11 @@
 
 #include "main.h"
 
+void drawMenuScreen(gameState* gameState);
+
+
+
+
 
 
 

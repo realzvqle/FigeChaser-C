@@ -2,6 +2,7 @@
 #define SCENEMANAGER_H_INCLUDED
 
 #include "loadCustomFont.h"
+#include "screens.h"    
 
 int drawCurrentScene(gameState* gameState);
 
