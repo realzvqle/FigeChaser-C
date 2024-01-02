@@ -10,7 +10,6 @@ entity setupPlayer(gameState* gameState){
     player.rotation = 0.0;
     player.texture = LoadTexture("resources/player.png");
     player.isInitialized = true;
-    printf("s\n");
     return player;
 
 }

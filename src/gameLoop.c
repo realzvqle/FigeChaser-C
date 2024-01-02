@@ -5,7 +5,8 @@
 
 
 void gameLoop(gameState* gameState){
-    
+     DrawTexture(gameState->background, 1600 / 160, 900 / 160, WHITE);
+
     controlPlayer(gameState);
     drawPlayer(gameState);
     drawEnemy(gameState);

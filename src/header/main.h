@@ -10,6 +10,8 @@
 
 #define dt GetFrameTime()
 #define BUFSIZE 512
+
+
 typedef struct transform {
     float x;
     float y;
@@ -45,6 +47,7 @@ typedef struct gameState {
     entity player;
     entity enemy;
     entity target;
+    Texture2D background;
 } gameState;
 
 

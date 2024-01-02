@@ -10,7 +10,6 @@ entity setupEnemy(gameState* gameState){
     enemy.rotation = 0.0;
     enemy.texture = LoadTexture("resources/enemy.png");
     enemy.isInitialized = true;
-    //printf("s\n");
     return enemy;
 
 }
@@ -48,6 +47,7 @@ void moveEnemy(transform* follower, transform* target, entity* enemy) {
         enemy->rotation = -0;
     }
 
+    // Border Checking
     if (follower->y <= -9) follower->y = -9 * dt;
 	if (follower->y >= 877) follower->y -= 800 * dt;
 	if (follower->x <= -6) follower->x = -6 * dt;
