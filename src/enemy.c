@@ -47,4 +47,9 @@ void moveEnemy(transform* follower, transform* target, entity* enemy) {
         follower->y = fmax(follower->y - speed, target->y);
         enemy->rotation = -0;
     }
+
+    if (follower->y <= -9) follower->y = -9 * dt;
+	if (follower->y >= 877) follower->y -= 800 * dt;
+	if (follower->x <= -6) follower->x = -6 * dt;
+	if (follower->x >= 1576) follower->x = 1576 * dt;
 }
