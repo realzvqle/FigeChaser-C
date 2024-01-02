@@ -7,7 +7,7 @@
 
 
 void drawPlayer(gameState* gameState);
-
-
+void controlPlayer(gameState* gameState);
+entity setupPlayer(gameState* gameState);
 
 #endif

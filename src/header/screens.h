@@ -5,8 +5,8 @@
 #include "main.h"
 
 void drawMenuScreen(gameState* gameState);
-
-
+void drawLooseScreen(gameState* gameState);
+void drawPauseScreen(gameState* gameState);
 
 
 

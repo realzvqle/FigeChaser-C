@@ -2,7 +2,7 @@
 #define WINDOW_H_INCLUDED
 
 #include "scenemanager.h"
-
+#include "player.h"
 bool startWindow(gameState* gameState);
 
 

@@ -2,7 +2,8 @@
 #define GAMELOOP_H_INCLUDED
 
 #include "player.h"
-
+#include "enemy.h"
+#include "collision.h"
 void gameLoop(gameState* gameState);
 
 

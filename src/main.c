@@ -1,8 +1,8 @@
 #include "header/window.h"
 
-int main() {
+int main(void) {
     gameState gameState;
     startWindow(&gameState);
 
-    return 0;
+    return gameState.scene.currentScene;
 }

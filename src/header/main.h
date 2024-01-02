@@ -4,8 +4,12 @@
 #include <raylib.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <math.h>
 
 
+
+#define dt GetFrameTime()
+#define BUFSIZE 512
 typedef struct transform {
     float x;
     float y;
@@ -26,17 +30,21 @@ typedef struct fontLoading{
     int size;
 } fontLoading;
 
-typedef struct player {
+typedef struct entity {
     Texture2D texture;
     transform size;
     transform position;
+    float rotation;
     bool isInitialized;
-} player;
+} entity;
+
 typedef struct gameState {
     window window;
     sceneManager scene;
     fontLoading font;
-    player player;
+    entity player;
+    entity enemy;
+    entity target;
 } gameState;
 
 

@@ -9,6 +9,11 @@ void InitializeGame(gameState* gameState){
 }
 
 
+void restartGame(gameState* gameState){
+    gameState->player.isInitialized = false;
+    gameState->enemy.isInitialized = false;
+}
+
 int drawCurrentScene(gameState* gameState){
     if(gameState->scene.isInitialized == false){
         InitializeGame(gameState);
@@ -19,6 +24,13 @@ int drawCurrentScene(gameState* gameState){
             break;
         case 1:
             gameLoop(gameState);
+            break;
+        case 2:
+            drawLooseScreen(gameState);
+            restartGame(gameState);
+            break;
+        case 3:
+            drawPauseScreen(gameState);
             break;
         default: 
             figeDrawText(gameState, "INVALID SCENE", 10, 10, 90, RED);
