@@ -12,10 +12,22 @@ float checkDistance(transform* first, transform* second){
 }
 
 
+void addScore(gameState* gameState){
+    gameState->target.position.x = GetRandomValue(0, 1400);
+    gameState->target.position.y = GetRandomValue(0, 600);
+    gameState->target.rotation = (float)GetRandomValue(0, 360);
+    gameState->score++;
+}
 
 void checkCollision(gameState* gameState){
-    if(checkDistance(&gameState->enemy.position, &gameState->player.position) < 0.1){
+    if(checkDistance(&gameState->enemy.position, &gameState->player.position) < 30){
         gameState->scene.currentScene = 2;
+    }
+    if(checkDistance(&gameState->enemy.position, &gameState->target.position) < 32){
+        gameState->scene.currentScene = 2;
+    }
+    if(checkDistance(&gameState->target.position, &gameState->player.position) < 32){
+        addScore(gameState);
     }
 }
 

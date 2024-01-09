@@ -13,6 +13,7 @@ window setupWindow(){
 bool startWindow(gameState* gameState) {
     SetTraceLogLevel(LOG_ERROR);
     gameState->window = setupWindow();
+
     InitWindow(gameState->window.size.x, gameState->window.size.y, gameState->window.name);
     SetExitKey(KEY_P);
     Image image = LoadImage("resources/icon.png");
@@ -25,6 +26,12 @@ bool startWindow(gameState* gameState) {
 
         EndDrawing();
     }
+    UnloadTexture(gameState->background);
+    UnloadTexture(gameState->enemy.texture);
+    UnloadTexture(gameState->player.texture);
+    UnloadTexture(gameState->target.texture);
+    UnloadFont(gameState->font.font);
+
     CloseWindow();
     return true;
 }

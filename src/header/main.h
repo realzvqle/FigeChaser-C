@@ -48,6 +48,7 @@ typedef struct gameState {
     entity enemy;
     entity target;
     Texture2D background;
+    int score;
 } gameState;
 
 

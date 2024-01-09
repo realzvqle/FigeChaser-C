@@ -4,6 +4,7 @@
 #include "player.h"
 #include "enemy.h"
 #include "collision.h"
+#include "target.h"
 void gameLoop(gameState* gameState);
 
 

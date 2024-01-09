@@ -6,12 +6,18 @@ void InitializeGame(gameState* gameState){
     gameState->font.font = LoadFontEx("resources/font.ttf", gameState->font.size, NULL, 0);
     gameState->scene.currentScene = 0;
     gameState->scene.isInitialized = true;
+    gameState->player.isInitialized = false;
+    gameState->enemy.isInitialized = false;
+    gameState->target.isInitialized = false;
+    gameState->score = 0;
 }
 
 
 void restartGame(gameState* gameState){
     gameState->player.isInitialized = false;
     gameState->enemy.isInitialized = false;
+    gameState->target.isInitialized = false;
+    gameState->score = 0;
 }
 
 int drawCurrentScene(gameState* gameState){

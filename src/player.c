@@ -21,7 +21,7 @@ void drawPlayer(gameState* gameState){
     if(gameState->player.isInitialized == false){
         gameState->player = setupPlayer(gameState);
     }
-    DrawTextureEx(gameState->player.texture, (Vector2){gameState->player.position.x,gameState->player.position.y}, gameState->player.rotation, 1.5f, WHITE);
+    DrawTextureEx(gameState->player.texture, (Vector2){gameState->player.position.x,gameState->player.position.y}, gameState->player.rotation, 1.0f, WHITE);
 }
 
 
@@ -47,7 +47,6 @@ void controlPlayer(gameState* gameState){
         gameState->player.rotation = 90.0;
         return;
     } 
-
 
     // Border Checking
     if (gameState->player.position.y <= -9) gameState->player.position.y = -9 * dt;
