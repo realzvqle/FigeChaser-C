@@ -1,7 +1,7 @@
 #ifndef MAIN_H_INCLUDED
 #define MAIN_H_INCLUDED
 
-#include <raylib.h>
+#include "raylib.h"
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
